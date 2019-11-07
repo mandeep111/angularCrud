@@ -1,0 +1,26 @@
+
+ <h3>Update Student</h3> <hr>
+<div class="row">
+    <div class="col-sm-6">
+
+       
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Student Name</label>
+      <input type="text" class="form-control" required [(ngModel)]="student.student_name" name="student_name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Student Email</label>
+      <input type="email" class="form-control" required [(ngModel)]="student.student_email" name="student_name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Student Branch</label>
+      <input type="text" class="form-control" required [(ngModel)]="student.student_branch" name="student_branch">
+    </div>
+
+   <div> <button type="submit" class="btn btn-success">Update Student</button></div>
+  </form>
+    </div>
+</div>

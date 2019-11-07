@@ -1,0 +1,30 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Student List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Student ID</th>
+          <th>Student Name</th>
+          <th>Student Email</th>
+          <th>Student Branch</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students">
+          <td>{{student.student_id}}</td>
+          <td>{{student.student_name}}</td>
+          <td>{{student.student_email}}</td>
+          <td>{{student.student_branch}}</td>
+          <td><button (click)="deleteStudent(student.student_id)" class="btn btn-danger">Delete</button>
+            <button (click)="updateStudent(student.student_id)" class="btn btn-primary"
+              style="margin-left: 10px">Update</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
